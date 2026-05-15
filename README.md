@@ -89,3 +89,8 @@ The platform follows a modular, production‑ready structure:
 6. **Testing**
 
    pytest tests/
+
+
+## 🌐 Live Demo   
+   
+Copy the entire block above into your `README.md`. Then replace `https://your-dashboard-url.com` with your actual deployment link (e.g., `https://capital-markets-risk.streamlit.app`).
