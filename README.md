@@ -1,4 +1,3 @@
-```markdown
 # Capital Markets Risk Analytics Platform
 
 [![Python 3.9+](https://img.shields.io/badge/python-3.9+-blue.svg)](https://www.python.org/downloads/)
@@ -36,23 +35,23 @@ Build a **centralised risk analytics platform** that:
 
 The platform follows a modular, production‑ready structure:
 
-```
-Capital Markets Risk Analytics Platform/
+´´´
 │
-├── data/                     # CSV data (generated once)
-├── dashboard/                # Streamlit frontend (app.py)
-├── src/                      # Core business logic
-│   ├── audit/                # Audit trail logging
-│   ├── market_data/          # Vendor feed & internal data loaders
-│   ├── quality/              # Data validation
-│   ├── storage/              # In‑memory database (CSV caching)
-│   ├── portfolio/            # Positions, exposure, P&L
-│   └── risk/                 # VaR, ES, Monte Carlo, stress tests
-├── tests/                    # Unit tests (pytest)
-├── notebooks/                # Jupyter exploratory analysis
+├── data/ # CSV data (generated once)
+├── dashboard/ # Streamlit frontend (app.py)
+├── src/ # Core business logic
+│ ├── audit/ # Audit trail logging
+│ ├── market_data/ # Vendor feed & internal data loaders
+│ ├── quality/ # Data validation
+│ ├── storage/ # In‑memory database (CSV caching)
+│ ├── portfolio/ # Positions, exposure, P&L
+│ └── risk/ # VaR, ES, Monte Carlo, stress tests
+├── tests/ # Unit tests (pytest)
+├── notebooks/ # Jupyter exploratory analysis
 ├── requirements.txt
 └── README.md
-```
+´´´
+
 
 **Tech stack**:
 - **Frontend / dashboard**: Streamlit
@@ -68,45 +67,25 @@ Capital Markets Risk Analytics Platform/
    ```bash
    git clone https://github.com/yourusername/capital-markets-risk-analytics-platform.git
    cd capital-markets-risk-analytics-platform
-   ```
 
-2. **Create a virtual environment (optional but recommended)**
-   ```bash
+2.   **Create a virtual environment**
+
    python -m venv venv
    source venv/bin/activate      # Linux/Mac
    venv\Scripts\activate         # Windows
-   ```
 
-3. **Install dependencies**
-   ```bash
+3.   **Install dependencies**
+
    pip install -r requirements.txt
-   ```
 
-4. **Generate initial data** (synthetic market prices, positions, benchmark)
-   ```bash
+4.   **Generate initial data (synthetic market prices, positions, benchmark)**
+
    python -c "from src.market_data.data_loader import generate_and_save_data; generate_and_save_data()"
-   ```
 
-## 🚀 Usage
+5.  **Usage**
 
-Launch the interactive dashboard:
+   streamlit run dashboard/app.py
 
-```bash
-streamlit run dashboard/app.py
-```
+6. **Testing**
 
-The dashboard will open in your browser. You can:
-- View portfolio exposure by asset class (pie chart)
-- Inspect historical daily P&L
-- Adjust confidence level for VaR / ES
-- Run stress tests (e.g., oil price +20%, equity crash)
-- See real‑time audit log of all calculations
-
-## 🧪 Testing
-
-Run unit tests with pytest:
-
-```bash
-pytest tests/
-```
-```
+   pytest tests/
