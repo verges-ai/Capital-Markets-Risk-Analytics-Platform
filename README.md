@@ -34,3 +34,18 @@ Build a **centralised risk analytics platform** that:
 ## 🏗️ Architecture
 
 The platform follows a modular, production‑ready structure:
+Capital Markets Risk Analytics Platform/
+│
+├── data/ # CSV data (generated once)
+├── dashboard/ # Streamlit frontend (app.py)
+├── src/ # Core business logic
+│ ├── audit/ # Audit trail logging
+│ ├── market_data/ # Vendor feed & internal data loaders
+│ ├── quality/ # Data validation
+│ ├── storage/ # In‑memory database (CSV caching)
+│ ├── portfolio/ # Positions, exposure, P&L
+│ └── risk/ # VaR, ES, Monte Carlo, stress tests
+├── tests/ # Unit tests (pytest)
+├── notebooks/ # Jupyter exploratory analysis
+├── requirements.txt
+└── README.md
