@@ -1,3 +1,4 @@
+```markdown
 # Capital Markets Risk Analytics Platform
 
 [![Python 3.9+](https://img.shields.io/badge/python-3.9+-blue.svg)](https://www.python.org/downloads/)
@@ -34,18 +35,78 @@ Build a **centralised risk analytics platform** that:
 ## 🏗️ Architecture
 
 The platform follows a modular, production‑ready structure:
+
+```
 Capital Markets Risk Analytics Platform/
 │
-├── data/ # CSV data (generated once)
-├── dashboard/ # Streamlit frontend (app.py)
-├── src/ # Core business logic
-│ ├── audit/ # Audit trail logging
-│ ├── market_data/ # Vendor feed & internal data loaders
-│ ├── quality/ # Data validation
-│ ├── storage/ # In‑memory database (CSV caching)
-│ ├── portfolio/ # Positions, exposure, P&L
-│ └── risk/ # VaR, ES, Monte Carlo, stress tests
-├── tests/ # Unit tests (pytest)
-├── notebooks/ # Jupyter exploratory analysis
+├── data/                     # CSV data (generated once)
+├── dashboard/                # Streamlit frontend (app.py)
+├── src/                      # Core business logic
+│   ├── audit/                # Audit trail logging
+│   ├── market_data/          # Vendor feed & internal data loaders
+│   ├── quality/              # Data validation
+│   ├── storage/              # In‑memory database (CSV caching)
+│   ├── portfolio/            # Positions, exposure, P&L
+│   └── risk/                 # VaR, ES, Monte Carlo, stress tests
+├── tests/                    # Unit tests (pytest)
+├── notebooks/                # Jupyter exploratory analysis
 ├── requirements.txt
 └── README.md
+```
+
+**Tech stack**:
+- **Frontend / dashboard**: Streamlit
+- **Data manipulation**: Pandas, NumPy
+- **Visualisation**: Plotly
+- **Statistics**: SciPy
+- **Testing**: Pytest
+- **Data sources**: Synthetic (or plug‑in yfinance for live data)
+
+## 📦 Installation
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/yourusername/capital-markets-risk-analytics-platform.git
+   cd capital-markets-risk-analytics-platform
+   ```
+
+2. **Create a virtual environment (optional but recommended)**
+   ```bash
+   python -m venv venv
+   source venv/bin/activate      # Linux/Mac
+   venv\Scripts\activate         # Windows
+   ```
+
+3. **Install dependencies**
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+4. **Generate initial data** (synthetic market prices, positions, benchmark)
+   ```bash
+   python -c "from src.market_data.data_loader import generate_and_save_data; generate_and_save_data()"
+   ```
+
+## 🚀 Usage
+
+Launch the interactive dashboard:
+
+```bash
+streamlit run dashboard/app.py
+```
+
+The dashboard will open in your browser. You can:
+- View portfolio exposure by asset class (pie chart)
+- Inspect historical daily P&L
+- Adjust confidence level for VaR / ES
+- Run stress tests (e.g., oil price +20%, equity crash)
+- See real‑time audit log of all calculations
+
+## 🧪 Testing
+
+Run unit tests with pytest:
+
+```bash
+pytest tests/
+```
+```
