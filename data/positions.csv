@@ -1,0 +1,7 @@
+asset,quantity,currency,asset_class
+AAPL Equity,1000,USD,Equity
+MSFT Equity,500,USD,Equity
+TLT Bond,20000,USD,Bond
+SPY ETF,300,USD,ETF
+OIL Future,5000,USD,Derivative
+VIX Call,10000,USD,Derivative
