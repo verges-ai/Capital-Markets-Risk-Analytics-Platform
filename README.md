@@ -6,7 +6,7 @@
 
 ## 🏦 Business Context
 
-Investment banks and asset managers (HSBC, DZ BANK, ODDO BHF) face a critical challenge:
+Investment banks and asset managers (HSBC, DZ BANK, ODDO BHF,...) face a critical challenge:
 
 > Market data, portfolio positions, and risk calculations are fragmented across Bloomberg/Reuters, internal trading systems, Excel reports, and SQL databases.
 
