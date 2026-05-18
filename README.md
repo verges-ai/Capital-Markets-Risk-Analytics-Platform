@@ -35,6 +35,7 @@ Build a **centralised risk analytics platform** that:
 
 The platform follows a modular, production‑ready structure:
 
+```bash
 ├── data/ # CSV data (generated once)
 ├── dashboard/ # Streamlit frontend (app.py)
 ├── src/ # Core business logic
@@ -48,6 +49,7 @@ The platform follows a modular, production‑ready structure:
 ├── notebooks/ # Jupyter exploratory analysis
 ├── requirements.txt
 
+```
 
 
 **Tech stack**:
