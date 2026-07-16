@@ -69,18 +69,20 @@ The platform follows a modular, production‑ready structure:
 
 2. **Create a virtual environment (optional but recommended)**
    python -m venv venv
+   
    source venv/bin/activate      # Linux/Mac
    venv\Scripts\activate         # Windows
+   
 
-3. **Install dependencies**
+4. **Install dependencies**
    pip install -r requirements.txt
 
-4. **Generate initial data (synthetic market prices, positions, benchmark)**
+5. **Generate initial data (synthetic market prices, positions, benchmark)**
    python -c "from src.market_data.data_loader import generate_and_save_data; generate_and_save_data()"
-5. **Usage**
+6. **Usage**
    streamlit run dashboard/app.py
-6. **Testing**
+7. **Testing**
    pytest tests/
-7. **🌐 Live Demo**
+8. **🌐 Live Demo**
     https://capital-markets-risk-analytics-platform-fsbmn7ukbu59fcjqfajgdh.streamlit.app/   
    
